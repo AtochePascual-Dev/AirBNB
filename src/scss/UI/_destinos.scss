@@ -1,0 +1,40 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+.destinos {
+  padding: 5rem 0;
+
+  &__grid {
+    display: grid;
+    gap: 2rem;
+    justify-items: center;
+
+    @include m.tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include m.desktop {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__titulo {
+    margin-bottom: 5rem;
+    font-size: 2.4rem;
+
+    @include m.tablet {
+      font-size: 3.2rem;
+    }
+  }
+}
+
+.destino {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 1rem;
+
+  &__img {
+    width: 14rem;
+    height: auto;
+  }
+}
