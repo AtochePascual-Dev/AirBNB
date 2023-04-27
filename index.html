@@ -9,7 +9,7 @@
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300,400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet">
   <!-- Css -->
   <link rel="stylesheet" href="./build/css/app.css">
   <title>AirBNB</title>
@@ -17,6 +17,54 @@
 
 <body>
 
+  <header class="header">
+    <div class="header__content header-container">
+      <div class="header__barra">
+        <p class="header__logo">Viaje</p>
+
+        <nav class="header__navegacion">
+          <a class="header__link" href="#">Hospedaje</a>
+          <a class="header__link" href="#">Experiencias</a>
+          <a class="header__link" href="#">Experiencias en Linea</a>
+        </nav>
+
+        <nav class="header__login">
+          <a class="header__link" href="#">Hazte Anfitrión</a>
+        </nav>
+      </div>
+
+      <form class="form">
+        <div class="form__campo">
+          <label class="form__label" for="ubicacion">Ubicacion</label>
+          <input id="ubicacion" class="form__input" type="text" placeholder="¿A donde viajas?">
+        </div>
+
+        <div class="form__campo">
+          <label class="form__label" for="llegada">Llegada</label>
+          <input id="llegada" class="form__input" type="date">
+        </div>
+
+        <div class="form__campo">
+          <label class="form__label" for="salida">Salida</label>
+          <input id="salida" class="form__input" type="date" placeholder="¿A donde viajas?">
+        </div>
+
+        <div class="form__campo">
+          <label class="form__label" for="huespedes">Huéspedes</label>
+          <input id="huespedes" class="form__input" type="number" placeholder="¿Cuantos?">
+        </div>
+
+        <div class="form__campo">
+          <input class="form__submit" type="submit" value="Buscar">
+        </div>
+      </form>
+
+      <div class="header__busqueda">
+        <p class="header__busqueda-text">¿Nos sabes a donde ir?</p>
+        <a class="header__busqueda-boton" href="#">Búqueda Flexible</a>
+      </div>
+    </div>
+  </header>
 </body>
 
 </html>
