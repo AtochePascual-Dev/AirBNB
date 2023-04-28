@@ -1,7 +1,7 @@
 @use "../base/variables" as v;
 @use "../base/mixins" as m;
 .destinos {
-  padding: 5rem 0;
+  padding-top: 5rem;
 
   &__grid {
     display: grid;
