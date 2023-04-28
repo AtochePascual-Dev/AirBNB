@@ -1,0 +1,44 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.experiencias {
+  padding-top: 5rem;
+
+  &__texto {
+    margin: 2rem 0;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 30rem);
+    gap: 2rem;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+    @include m.tablet {
+      grid-template-columns: repeat(3, 1fr);
+      overflow-x: unset;
+    }
+  }
+}
+
+.experiencia {
+  scroll-snap-align: center;
+  display: grid;
+  gap: 1rem;
+
+  &__titulo {
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  &__img {
+    border-radius: 1.5rem;
+
+    @include m.tablet {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
