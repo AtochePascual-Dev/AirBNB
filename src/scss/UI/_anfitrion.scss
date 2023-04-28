@@ -1,0 +1,61 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.anfitrion {
+  margin-top: 5rem;
+  padding: 5rem;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 12rem;
+  border-radius: 2rem;
+  background-image: linear-gradient(
+      to bottom,
+      v.$negro 0%,
+      v.$negro 50%,
+      transparent 50%,
+      transparent 100%
+    ),
+    url("../img/anfitrion.jpg");
+  background-position: center, center 29rem;
+  background-repeat: no-repeat;
+  background-size: 100%, 75rem;
+
+  @include m.tablet {
+    padding: 10rem 5rem;
+    grid-template-rows: unset;
+    row-gap: unset;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10rem;
+    background-image: linear-gradient(
+        to right,
+        v.$negro 0%,
+        v.$negro 45%,
+        transparent 50%,
+        transparent 100%
+      ),
+      url("../img/anfitrion.jpg");
+    background-position: top right;
+    background-size: 100%, 70rem;
+  }
+
+  @include m.desktop {
+    background-size: 100%, 70rem;
+  }
+
+  &__titulo,
+  &__texto {
+    color: v.$blanco;
+  }
+
+  &__titulo {
+    line-height: 1;
+    margin-bottom: 2rem;
+  }
+
+  &__boton {
+    @include m.boton(v.$blanco, v.$negro);
+    margin-top: 5rem;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+}
